@@ -5,6 +5,7 @@ using DesignPatterns.src.OopPrinciple.Abstraction;
 // using DesignPatterns.src.OopPrinciple.Inheritance;
 using DesignPatterns.src.OopPrinciple.Polymorphism;
 using System.ComponentModel;
+using DesignPatterns.src.OopPrinciple.Coupling;
 
 BankAccount bankAccount = new BankAccount(100);
 
@@ -54,7 +55,13 @@ foreach (var vehicle in vehicles)
     vehicle.Start();
 }
 
+System.Console.WriteLine("===================================");
 
+// Coupling ==> degree of dependency btw diff classes
+
+// var order = new Order(new EmailSender());
+var order = new Order(new SmsSender());
+order.PlaceOrder();
 
 
 
