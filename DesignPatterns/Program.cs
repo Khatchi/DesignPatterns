@@ -64,4 +64,10 @@ var order = new Order(new SmsSender());
 order.PlaceOrder();
 
 
+// Composition
+
+// involves creating a complex objects by combining simpler objects or components.
+
+
+
 
