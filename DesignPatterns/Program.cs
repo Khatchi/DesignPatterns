@@ -7,6 +7,10 @@ using DesignPatterns.src.OopPrinciple.Abstraction;
 using System.ComponentModel;
 using DesignPatterns.src.OopPrinciple.Coupling;
 using DesignPatterns.src.OopPrinciple.Composition;
+// using DesignPatterns.src.SOLID.L;
+using System.Drawing;
+using DesignPatterns.src.SOLID.L;
+using System.Buffers;
 
 BankAccount bankAccount = new BankAccount(100);
 
@@ -74,6 +78,9 @@ System.Console.WriteLine("===================================");
 var car = new Car();
 car.Startcar();
 
+System.Console.WriteLine("===================================");
+
+
 
 // SOLID PRINCIPLE STARTS HERE
 
@@ -89,3 +96,22 @@ O: ==> Open/Close Principle (OCP)
 - Software entities (classes, modules, functions, etc.) should be open for
 extension but closed for modification.
 */
+
+
+/*
+L: ==> Liskov Substitution Principle (LSP)
+- Objects of a superclass should be replaceable with objects of its sybclass without
+affecting the correctness of the program.
+*/
+
+// var rect = new Rectangle();
+// rect.Height = 10;
+// rect.Width = 5;
+// Console.WriteLine("Expected area = 10 * 5 = 50");
+// // Console.WriteLine("Calculated area = " + rect.Area);
+
+// Shape rectangle = new Rectangle {Width = 5, Height = 4};
+// Console.WriteLine($"Area of rectangle: {Rectangle.Area}");
+
+Shape square = new Square {SideLength = 5};
+Console.WriteLine($"Area of square: {square.Area}");
