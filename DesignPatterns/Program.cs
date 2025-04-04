@@ -11,6 +11,7 @@ using DesignPatterns.src.OopPrinciple.Composition;
 using System.Drawing;
 using DesignPatterns.src.SOLID.L;
 using System.Buffers;
+using DesignPatterns.src.SOLID.I;
 
 BankAccount bankAccount = new BankAccount(100);
 
@@ -115,3 +116,16 @@ affecting the correctness of the program.
 
 Shape square = new Square {SideLength = 5};
 Console.WriteLine($"Area of square: {square.Area}");
+
+Console.WriteLine("===================================");
+
+
+/*
+I: ==> Interface Segregation Principle (ISP)
+- Clients should not be force to depend on interfaces they do not use
+*/
+
+var circle = new Circle();
+circle.Radius = 10;
+
+Console.WriteLine(circle.Area());
