@@ -12,6 +12,7 @@ using System.Drawing;
 using DesignPatterns.src.SOLID.L;
 using System.Buffers;
 using DesignPatterns.src.SOLID.I;
+// using DesignPatterns.src.SOLID.D;
 
 BankAccount bankAccount = new BankAccount(100);
 
@@ -129,3 +130,12 @@ var circle = new Circle();
 circle.Radius = 10;
 
 Console.WriteLine(circle.Area());
+
+
+/*
+D: ==> Depedency Inversion Principle (DIP)
+- High-level modules should not depend on low-level modules.
+Both should depend on astractions
+*/
+
+// var car = new Car(IEngine);
